@@ -8,17 +8,20 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "pocketbase:types": "pocketbase-typegen --db ./.data/data.db --out types/pocketbase-types.ts"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "eslint": "^8.52.0",
     "nuxt": "^3.8.0",
+    "pocketbase-typegen": "^1.2.0",
     "vue": "^3.3.6",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.9.0"
+    "@nuxt/ui": "^2.9.0",
+    "pocketbase": "^0.19.0"
   }
 }

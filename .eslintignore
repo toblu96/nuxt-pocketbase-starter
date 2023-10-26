@@ -7,3 +7,4 @@ coverage
 # Others
 .DS_Store
 package-lock.json
+.data

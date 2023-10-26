@@ -1,0 +1,14 @@
+services:
+  pocketbase:
+    container_name: pocketbase
+    image: ghcr.io/muchobien/pocketbase:0.19.0
+    restart: unless-stopped
+    ports:
+      - 8090:8090
+    volumes:
+      - .data:/pb_data
+    healthcheck: #optional (recommended) since v0.10.0
+      test: wget --no-verbose --tries=1 --spider http://localhost:8090/api/health || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
